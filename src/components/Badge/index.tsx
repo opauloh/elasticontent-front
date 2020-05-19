@@ -3,14 +3,13 @@ import styled from 'styled-components';
 import { Color } from '../../helpers/dictionary';
 
 export const Wrapper = styled.span`
-    font-family: SF Pro Text;
     font-style: normal;
     font-weight: 600;
     font-size: 0.625rem;
     line-height: 0.937rem;
     border-radius: 2px;
     padding: 1px 4px;
-    color: #4F4F4F;
+    color: var(--text-color-2);
     background-color: ${props => (Color(props.color))};
 `;
 

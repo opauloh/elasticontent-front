@@ -1,13 +1,13 @@
 export const Color = (color: string | undefined) => {
     switch (color) {
-        case "purple":
-            return "#E5E7FA";
         case "yellow":
-            return "#FDF2D6";
+            return "var(--yellow)";
+        case "accent":
+            return "var(--accent)";
         case "blue":
-            return "#D5E9FA";
+            return "var(--blue)";
         case "green":
-            return "#D5F2EA";
+            return "var(--green)";
         default:
             break;
     }
