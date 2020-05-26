@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react';
 import styled from 'styled-components';
-import { Color } from '../../helpers/dictionary';
+import { Color } from '../../../helpers/dictionary';
 
 export const Wrapper = styled.div`
     width: 5rem;
