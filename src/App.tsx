@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import Badge from './components/Badge';
-import Pallete from './components/Pallete';
+import Badge from './components/base/Badge';
+import Pallete from './components/base/Pallete';
+import IconTitle from './components/base/Title/Icon';
+import { Avatar } from './components/base/Avatar';
 
 const App: React.FC = () => {
 
@@ -48,12 +50,39 @@ const App: React.FC = () => {
         </pre>
       </p>
       <div>
+        Small
         <div><Badge color="yellow">New</Badge></div>
         <div><Badge color="accent">Producing content</Badge></div>
         <div><Badge color="blue">Reviewing</Badge></div>
         <div><Badge color="green">Approved</Badge></div>
       </div>
       <hr />
+      <div>
+        Medium
+        <div><Badge size="md" color="yellow">New</Badge></div>
+        <div><Badge size="md" color="accent">Producing content</Badge></div>
+        <div><Badge size="md" color="blue">Reviewing</Badge></div>
+        <div><Badge size="md" color="green">Approved</Badge></div>
+      </div>
+      <hr />
+      <div>
+        IconTitle
+        <IconTitle icon="key">Propósito</IconTitle>
+        <IconTitle icon="key">Direcionais</IconTitle>
+      </div>
+      <hr />
+      Avatar<br />
+      Small
+      <pre>
+        {`<Avatar size="sm" src="https://cdn.iconscout.com/icon/free/png-512/avatar-372-456324.png" />`}<br />
+      </pre>
+      <Avatar size="sm" src="https://cdn.iconscout.com/icon/free/png-512/avatar-372-456324.png" />
+      <br />
+      Medium
+      <pre>
+        {`<Avatar size="md" src="https://cdn.iconscout.com/icon/free/png-512/avatar-372-456324.png" />`}<br />
+      </pre>
+      <Avatar size="md" src="https://cdn.iconscout.com/icon/free/png-512/avatar-372-456324.png" />
     </div>
   );
 }
