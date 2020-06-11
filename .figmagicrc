@@ -1,0 +1,6 @@
+{
+    "outputFolderTokens": "src/tokens",
+    "outputTokenFormat": "js",
+    "outputFolderGraphics" : "src/assets/icons",
+    "skipCamelize" : true
+}

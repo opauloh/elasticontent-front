@@ -1,23 +1,26 @@
 import React from "react";
 import styled from 'styled-components';
-import { ReactComponent as Key } from '../../../assets/elacticontent-icons/Icons/16px/key.svg';
+import spacing from "../../../tokens/spacing";
+import fontSizes from "../../../tokens/fontSizes";
+import fontWeights from "../../../tokens/fontWeights";
+import lineHeights from "../../../tokens/lineHeights";
 
 const Title = styled.h5`
-    font-size: 0.75rem;
-    font-weight: 600;
-    line-height: 1.25rem;
+    font-size: ${fontSizes["$font-size-xxxs"]};
+    font-weight: ${fontWeights["$font-weight-medium"]};
+    line-height: ${lineHeights["$"]};
     color: #9F9F9F;
     display: flex;
     align-items: center;
     margin: 0;
-    padding: 0;
+    padding: 0 ${spacing["$spacing-xs"]};
+    svg {
+        margin-right: ${spacing["$spacing-sm"]};
+    }
 `;
 
-// const Icon = ({ icon }) => <img style={{ color: 'red' }} alt={key} src={key} />;
-const Icon = ({ icon }) => <Key style={{ marginRight: 12 }} />;
-
-export default function IconTitle({ icon, children }) {
-    return (
-        <Title><Icon /> {children}</Title>
-    )
+export default function IconTitle({ text, children }) {
+    return (<>
+        <Title>{children}{text}</Title>
+    </>)
 }

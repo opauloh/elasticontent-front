@@ -3,6 +3,7 @@ import Badge from './components/base/Badge';
 import Pallete from './components/base/Pallete';
 import IconTitle from './components/base/Title/Icon';
 import { Avatar } from './components/base/Avatar';
+import { IconFilter } from './assets/icons/components/IconFilter';
 
 const App: React.FC = () => {
 
@@ -25,8 +26,8 @@ const App: React.FC = () => {
           <Pallete color="yellow" />
         </div>
         <div style={{ textAlign: "center", marginRight: "2rem" }}>
-          <div style={{ marginBottom: "0.5rem" }}>accent</div>
-          <Pallete color="accent" />
+          <div style={{ marginBottom: "0.5rem" }}>purple</div>
+          <Pallete color="purple" />
         </div>
         <div style={{ textAlign: "center", marginRight: "2rem" }}>
           <div style={{ marginBottom: "0.5rem" }}>blue</div>
@@ -44,31 +45,23 @@ const App: React.FC = () => {
         Usage:
         <pre>
           {`<Badge color="yellow">New</Badge>`}<br />
-          {`<Badge color="accent">Producing content</Badge>`}<br />
+          {`<Badge color="purple">Producing content</Badge>`}<br />
           {`<Badge color="blue">Reviewing</Badge>`}<br />
           {`<Badge color="green">Approved</Badge>`}
         </pre>
       </p>
-      <div>
-        Small
-        <div><Badge color="yellow">New</Badge></div>
-        <div><Badge color="accent">Producing content</Badge></div>
-        <div><Badge color="blue">Reviewing</Badge></div>
-        <div><Badge color="green">Approved</Badge></div>
-      </div>
       <hr />
       <div>
         Medium
         <div><Badge size="md" color="yellow">New</Badge></div>
-        <div><Badge size="md" color="accent">Producing content</Badge></div>
+        <div><Badge size="md" color="purple">Producing content</Badge></div>
         <div><Badge size="md" color="blue">Reviewing</Badge></div>
         <div><Badge size="md" color="green">Approved</Badge></div>
       </div>
       <hr />
       <div>
         IconTitle
-        <IconTitle icon="key">Propósito</IconTitle>
-        <IconTitle icon="key">Direcionais</IconTitle>
+        <IconTitle text="Propósito"><IconFilter /></IconTitle>
       </div>
       <hr />
       Avatar<br />

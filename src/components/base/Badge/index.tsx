@@ -3,19 +3,22 @@ import styled from 'styled-components';
 import { Color } from '../../../helpers/dictionary';
 import { ColorType } from '../../../types/ColorType';
 import { SizeType } from '../../../types/SizeType';
-
+import fontSizes from '../../../tokens/fontSizes';
+import radii from '../../../tokens/radii';
+import spacing from '../../../tokens/spacing';
+import lineHeights from '../../../tokens/lineHeights';
+import fontWeights from '../../../tokens/fontWeights';
 
 export const Wrapper = styled.span<{ size: string }>`
-    font-style: normal;
-    font-weight: 600;
-    font-size: ${props => props.size === 'sm' ? '0.625rem' : '0.75rem'};
-    line-height: ${props => props.size === 'sm' ? '0.8125rem' : '1.25rem'};
-    border-radius: 0.125rem;
-    padding: 0.062rem 0.25rem;
-    color: var(--text-color-2);
+    font-weight: ${fontWeights["$font-weight-medium"]};
+    font-size: ${fontSizes["$font-size-xxxs"]};
+    line-height: ${lineHeights["$line-height-sm"]};
+    border-radius: ${radii["$border-radius-xs"]};
+    padding-left: ${spacing["$spacing-xs"]};
+    padding-right: ${spacing["$spacing-xs"]};
+    color: var(--theme-text-secondary);
     background-color: ${props => (Color(props.color))};
 `;
-
 
 type BadgeProps = {
     color: ColorType
