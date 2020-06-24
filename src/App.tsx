@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react';
 import Badge from './components/base/Badge';
 import Pallete from './components/base/Pallete';
 import IconTitle from './components/base/Title/Icon';
-import { Avatar } from './components/base/Avatar';
-import { IconFilter } from './assets/icons/components/IconFilter';
+import { AvatarImg } from './components/base/Avatar/AvatarImg';
+import SvgIconFilter from './components/icons/IconFilter';
+import AvatarName from './components/base/Avatar/AvatarName';
 
 const App: React.FC = () => {
 
@@ -17,7 +18,7 @@ const App: React.FC = () => {
 
   return (
     <div style={{ padding: "1rem" }}>
-      <h1>Boring Design System <button style={{ position: "absolute", right: 10, top: 10 }} onClick={toggleTheme}>Toggle Dark Mode</button></h1>
+      <h1>Style Guide <button style={{ position: "absolute", right: 10, top: 10 }} onClick={toggleTheme}>Toggle Dark Mode</button></h1>
 
       <h2>Colors</h2>
       <div style={{ display: "flex" }}>
@@ -41,15 +42,13 @@ const App: React.FC = () => {
       </div>
       <hr />
       <h2>Badges</h2>
-      <p>
         Usage:
-        <pre>
-          {`<Badge color="yellow">New</Badge>`}<br />
-          {`<Badge color="purple">Producing content</Badge>`}<br />
-          {`<Badge color="blue">Reviewing</Badge>`}<br />
-          {`<Badge color="green">Approved</Badge>`}
-        </pre>
-      </p>
+      <pre>
+        {`<Badge color="yellow">New</Badge>`}<br />
+        {`<Badge color="purple">Producing content</Badge>`}<br />
+        {`<Badge color="blue">Reviewing</Badge>`}<br />
+        {`<Badge color="green">Approved</Badge>`}
+      </pre>
       <hr />
       <div>
         Medium
@@ -61,21 +60,24 @@ const App: React.FC = () => {
       <hr />
       <div>
         IconTitle
-        <IconTitle text="Propósito"><IconFilter /></IconTitle>
+        <IconTitle text="Propósito"><SvgIconFilter /></IconTitle>
       </div>
       <hr />
       Avatar<br />
       Small
       <pre>
-        {`<Avatar size="sm" src="https://cdn.iconscout.com/icon/free/png-512/avatar-372-456324.png" />`}<br />
+        {`<AvatarImg size="md" src="https://www.pathstone.com/app/uploads/2020/02/avatar-placeholder.png" />`}<br />
       </pre>
-      <Avatar size="sm" src="https://cdn.iconscout.com/icon/free/png-512/avatar-372-456324.png" />
+      <AvatarImg size="md" src="https://www.pathstone.com/app/uploads/2020/02/avatar-placeholder.png" />
       <br />
       Medium
       <pre>
-        {`<Avatar size="md" src="https://cdn.iconscout.com/icon/free/png-512/avatar-372-456324.png" />`}<br />
+        {`<AvatarImg size="lg" src="https://www.pathstone.com/app/uploads/2020/02/avatar-placeholder.png" />`}<br />
       </pre>
-      <Avatar size="md" src="https://cdn.iconscout.com/icon/free/png-512/avatar-372-456324.png" />
+      <AvatarImg size="lg" src="https://www.pathstone.com/app/uploads/2020/02/avatar-placeholder.png" />
+      <hr />
+      <AvatarName size="lg" src="https://www.pathstone.com/app/uploads/2020/02/avatar-placeholder.png">Drieli Lopes</AvatarName>
+
     </div>
   );
 }
