@@ -22,7 +22,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "update-ds": "node --experimental-modules ./node_modules/@elasticontent/figma-react-design-system/index.mjs"
+    "update-ds": "node --experimental-modules ./node_modules/@elasticontent/figma-react-design-system/index.mjs",
+    "update-icons": "node --experimental-modules ./node_modules/@elasticontent/figma-react-design-system/index.mjs --syncGraphics && npx @svgr/cli --typescript --icon --replace-attr-values \"#000=currentColor\" -d src/components/icons src/assets/icons"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -41,6 +42,7 @@
   },
   "devDependencies": {
     "@elasticontent/figma-react-design-system": "^3.0.22",
+    "@svgr/cli": "^5.4.0",
     "@types/react-router-dom": "^5.1.5",
     "@types/styled-components": "^5.1.0"
   }
