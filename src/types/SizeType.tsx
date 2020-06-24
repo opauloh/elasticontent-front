@@ -1,1 +1,1 @@
-export type SizeType = 'sm' | 'md';
+export type SizeType = 'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
