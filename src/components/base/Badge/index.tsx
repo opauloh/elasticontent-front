@@ -25,8 +25,10 @@ type BadgeProps = {
     size?: SizeType
 }
 
-export const Badge: FunctionComponent<BadgeProps> = ({ color, size = 'sm', children }) => <Wrapper size={size} color={color}>
-    {children}
-</Wrapper>;
+export const Badge: FunctionComponent<BadgeProps> =
+    ({ color, size = 'sm', children }) =>
+        <Wrapper size={size} color={color}>
+            {children}
+        </Wrapper>;
 
 export default Badge;
