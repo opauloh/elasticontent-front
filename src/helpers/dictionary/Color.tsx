@@ -10,6 +10,8 @@ export const Color = (color: string | undefined) => {
             return "var(--theme-color-green)";
         case "red":
             return "var(--theme-color-red)";
+        case "gray":
+            return "var(--theme-color-gray)";
         default:
             break;
     }

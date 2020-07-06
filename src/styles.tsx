@@ -5,35 +5,90 @@ import fontFamilies from './tokens/fontFamilies';
 
 export const GlobalStyle = createGlobalStyle`
 :root {
-  --theme-text: ${colors["$color-grey-600"]};
-  --theme-text-secondary: ${colors["$color-grey-800"]};
-  --theme-color-purple: ${colors["$color-purple-100"]};
-  --theme-color-yellow: ${colors["$color-yellow-100"]};
-  --theme-color-blue: ${colors["$color-blue-100"]};
-  --theme-color-green: ${colors["$color-green-100"]};
-  --theme-color-red: ${colors["$color-red-400"]};
-  --theme-bg-color: ${colors["$color-bg-000"]};
-  --theme-bg-color-secondary: ${colors["$color-grey-200"]};
-  --theme-bg-color-red: ${colors["$color-bg-400"]};
-  --theme-bg-color-tooltip: ${colors["$color-bg-300"]};
+  --theme-text: ${colors["$gray-60"]};
+  --theme-text-secondary: ${colors["$gray-80"]};
+  --theme-text-tertiary: ${colors["$gray-40"]};
+  --theme-color-purple: ${colors["$purple-10"]};
+  --theme-color-yellow: ${colors["$yellow-10"]};
+  --theme-color-blue: ${colors["$blue-10"]};
+  --theme-color-green: ${colors["$green-10"]};
+  --theme-color-red: ${colors["$red-40"]};
+  --theme-color-gray: ${colors["$gray-40"]};
+  --theme-bg-color: ${colors["$gray-10"]};
+  --theme-bg-color-secondary: ${colors["$gray-20"]};
+  --theme-bg-color-tertiary: ${colors["$gray-30"]};
+  --theme-bg-color-red: ${colors["$red-40"]};
+  --theme-bg-color-tooltip: ${colors["$gray-80"]};
 }
 [data-theme="dark"] {
-  --theme-text: ${colors["$color-grey-100"]};
-  --theme-text-secondary: ${colors["$color-grey-100"]};
-  --theme-color-purple: ${colors["$color-purple-200"]};
-  --theme-color-yellow: ${colors["$color-yellow-200"]};
-  --theme-color-blue: ${colors["$color-blue-200"]};
-  --theme-color-green: ${colors["$color-green-200"]};
-  --theme-color-red: ${colors["$color-red-300"]};
-  --theme-bg-color: ${colors["$color-bg-100"]};
-  --theme-bg-color-secondary: ${colors["$color-bg-000"]};
-  --theme-bg-color-red: ${colors["$color-bg-200"]};
-  --theme-bg-color-tooltip: ${colors["$color-bg-300"]};
+  --theme-text: ${colors["$gray-10"]};
+  --theme-text-secondary: ${colors["$gray-10"]};
+  --theme-text-tertiary: ${colors["$gray-10"]};
+  --theme-color-purple: ${colors["$purple-20"]};
+  --theme-color-yellow: ${colors["$yellow-20"]};
+  --theme-color-blue: ${colors["$blue-20"]};
+  --theme-color-green: ${colors["$green-20"]};
+  --theme-color-red: ${colors["$red-30"]};
+  --theme-color-gray: ${colors["$gray-70"]};
+  --theme-bg-color: ${colors["$gray-80"]};
+  --theme-bg-color-secondary: ${colors["$black"]};
+  --theme-bg-color-tertiary: ${colors["$gray-80"]};
+  --theme-bg-color-red: ${colors["$red-60"]};
+  --theme-bg-color-tooltip: ${colors["$gray-80"]};
 }
 
 
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
 body {
-  font-size: ${fontSizes["$font-size-xxxs"]};
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+  font-size: ${fontSizes["$font-size-xxs"]};
   margin: 0;
   font-family: ${fontFamilies["$font-family"]};
   -webkit-font-smoothing: antialiased;
