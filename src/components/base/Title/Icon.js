@@ -8,14 +8,14 @@ import lineHeights from "../../../tokens/lineHeights";
 const Title = styled.h5`
     font-size: ${fontSizes["$font-size-xxxs"]};
     font-weight: ${fontWeights["$font-weight-medium"]};
-    line-height: ${lineHeights["$"]};
-    color: #9F9F9F;
+    line-height: ${lineHeights["$line-height-sm"]};
+    color: var(--theme-text-tertiary);
     display: flex;
     align-items: center;
     margin: 0;
     padding: 0 ${spacing["$spacing-xs"]};
     svg {
-        margin-right: ${spacing["$spacing-sm"]};
+        margin-right: ${spacing["$spacing-xs"]};
     }
 `;
 
