@@ -1,6 +1,6 @@
 import React from 'react';
-import Sidebar from '../../components/Sidebar';
-import Cardlist from '../../components/Cardlist';
+import Sidebar from '../../app/Sidebar';
+import Cardlist from '../Cardlist';
 import { Styled } from './styled';
 
 const Inbox: React.FC = () => {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Styled } from './styled';
-import Card from '../base/Card';
+import Card from '../Card';
 import { CardType } from '../../types/CardType';
 
 

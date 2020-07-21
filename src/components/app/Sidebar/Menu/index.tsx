@@ -1,9 +1,9 @@
 import React, { FunctionComponent, useState } from 'react';
-import Dropdown from './Dropdown';
-import Badge from '../../components/base/Badge/index';
-import { IconSheet, IconStarOutline, IconPencil, IconRefresh, IconPause, IconCheck, IconUserAssigned } from '../icons';
-import colors from '../../tokens/colors';
-import AvatarImg from '../base/Avatar/AvatarImg';
+import Dropdown from '../Dropdown';
+import Badge from '../../Badge/index';
+import { IconSheet, IconStarOutline, IconPencil, IconRefresh, IconPause, IconCheck, IconUserAssigned } from '../../../icons';
+import colors from '../../../../tokens/colors';
+import AvatarImg from '../../Avatar/AvatarImg';
 
 enum MenuStatus {
     Default,

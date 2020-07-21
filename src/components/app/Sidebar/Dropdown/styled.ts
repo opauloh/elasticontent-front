@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import spacing from '../../../tokens/spacing';
-import colors from '../../../tokens/colors';
-import fontWeights from '../../../tokens/fontWeights';
-import fontSizes from '../../../tokens/fontSizes';
-import lineHeights from '../../../tokens/lineHeights';
+import spacing from '../../../../tokens/spacing';
+import colors from '../../../../tokens/colors';
+import fontWeights from '../../../../tokens/fontWeights';
+import fontSizes from '../../../../tokens/fontSizes';
+import lineHeights from '../../../../tokens/lineHeights';
 
 const Dropdown = styled.div`
     margin-top: ${spacing["$spacing-lg"]};

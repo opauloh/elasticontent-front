@@ -4,7 +4,7 @@ import fontWeights from '../../../../tokens/fontWeights';
 import fontSizes from '../../../../tokens/fontSizes';
 import { AvatarImg } from '../AvatarImg';
 import spacing from '../../../../tokens/spacing';
-import { SizeType } from '../../../../types/SizeType';
+import { SizeType } from '../../../types/SizeType';
 
 const Name = styled.span`
     font-weight: ${fontWeights["$font-weight-medium"]};

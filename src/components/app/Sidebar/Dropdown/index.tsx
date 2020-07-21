@@ -3,7 +3,7 @@ import React, { FunctionComponent, useState } from 'react';
 // import radii from '../../../../tokens/radii';
 // import { getSize } from '../../../../helpers/sizeHelper';
 import { Styled } from "./styled";
-import { IconArrowRight, IconArrowUp } from '../../icons';
+import { IconArrowRight, IconArrowUp } from '../../../icons';
 
 
 const Icon = ({ active = false, ...props }) => {
@@ -39,7 +39,10 @@ export const Dropdown: FunctionComponent<DropdownProps>
                 {/* <DropdownItem><IconSheet /> Minha Pauta</DropdownItem> */}
                 <Styled.Item
                     // onClick={() => setActiveItem(content.id)}
-                    onClick={() => callback(content.id)}
+                    onClick={() => {
+                        setActive(true);
+                        callback(content.id);
+                    }}
                     className={activeItem === content.id ? 'active' : ''}
                 >
                     <Icon

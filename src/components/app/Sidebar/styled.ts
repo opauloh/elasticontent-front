@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import spacing from '../../tokens/spacing';
+import spacing from '../../../tokens/spacing';
 
 const Sidebar = styled.div`
     width: 254px;

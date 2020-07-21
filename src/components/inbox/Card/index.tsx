@@ -1,9 +1,9 @@
 import React from 'react';
 import { Styled } from './styled';
-import { CardType } from '../../../types/CardType';
-import AvatarImg from '../Avatar/AvatarImg';
+import { CardType } from '../../types/CardType';
+import AvatarImg from '../../app/Avatar/AvatarImg';
 import { IconStar } from '../../icons';
-import Status from '../Status';
+import Status from '../../app/Status';
 
 type CardProps = {
   card: CardType

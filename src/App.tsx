@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import Badge from './components/base/Badge';
-import Pallete from './components/base/Pallete';
-import IconTitle from './components/base/Title/Icon';
-import { AvatarImg } from './components/base/Avatar/AvatarImg';
+import Badge from './components/app/Badge';
+import Pallete from './components/app/Pallete';
+import IconTitle from './components/app/Title/Icon';
+import { AvatarImg } from './components/app/Avatar/AvatarImg';
 import SvgIconFilter from './components/icons/IconFilter';
-import AvatarName from './components/base/Avatar/AvatarName';
+import AvatarName from './components/app/Avatar/AvatarName';
 
 const App: React.FC = () => {
 

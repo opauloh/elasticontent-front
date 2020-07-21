@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react';
 import styled from 'styled-components';
-import { SizeType } from '../../../../types/SizeType';
+import { SizeType } from '../../../types/SizeType';
 import radii from '../../../../tokens/radii';
 import { getSize } from '../../../../helpers/sizeHelper';
 

@@ -1,8 +1,8 @@
 import React, { FunctionComponent } from 'react';
 import styled from 'styled-components';
 import { Color } from '../../../helpers/dictionary';
-import { ColorType } from '../../../types/ColorType';
-import { SizeType } from '../../../types/SizeType';
+import { ColorType } from '../../types/ColorType';
+import { SizeType } from '../../types/SizeType';
 import fontSizes from '../../../tokens/fontSizes';
 import radii from '../../../tokens/radii';
 import spacing from '../../../tokens/spacing';

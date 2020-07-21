@@ -1,5 +1,5 @@
 import spacing from '../tokens/spacing';
-import { SizeType } from '../types/SizeType';
+import { SizeType } from '../components/types/SizeType';
 
 export const getSize = (size: SizeType) => {
     switch (size) {
