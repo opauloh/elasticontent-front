@@ -46,7 +46,8 @@ const colors = {
     "$gray-20": "rgba(246, 245, 245, 1)",
     "$gray-30": "rgba(232, 232, 232, 1)",
     "$gray-40": "rgba(208, 208, 208, 1)",
-    "$gray-50": "rgba(152, 152, 152, 1)"
+    "$gray-50": "rgba(152, 152, 152, 1)",
+    "$gray-90": "#202020"
 }
 
 export default colors;
