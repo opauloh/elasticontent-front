@@ -2,6 +2,8 @@ import React from 'react';
 import Sidebar from '../../app/Sidebar';
 import Cardlist from '../Cardlist';
 import { Styled } from './styled';
+import Content from '../../content/Content';
+import Nav from '../../app/Nav';
 
 const Inbox: React.FC = () => {
     return (
@@ -29,6 +31,8 @@ const Inbox: React.FC = () => {
                     description: 'lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum '
                 }
             ]} />
+            <Content />
+            <Nav />
         </Styled.Inbox>
     )
 }
