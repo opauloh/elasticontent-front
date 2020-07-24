@@ -41,7 +41,7 @@
     ]
   },
   "devDependencies": {
-    "@elasticontent/figma-react-design-system": "^3.0.22",
+    "@elasticontent/figma-react-design-system": "^3.1.2",
     "@svgr/cli": "^5.4.0",
     "@types/react-router-dom": "^5.1.5",
     "@types/styled-components": "^5.1.0"
