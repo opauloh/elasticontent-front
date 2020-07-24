@@ -1220,10 +1220,10 @@
   resolved "https://registry.yarnpkg.com/@csstools/normalize.css/-/normalize.css-10.1.0.tgz#f0950bba18819512d42f7197e56c518aa491cf18"
   integrity sha512-ij4wRiunFfaJxjB0BdrYHIH8FxBJpOwNPhhAcunlmPdXudL1WQV1qoP9un6JsEBAgQH+7UXyyjh0g7jTxXK6tg==
 
-"@elasticontent/figma-react-design-system@^3.0.22":
-  version "3.0.23"
-  resolved "https://registry.yarnpkg.com/@elasticontent/figma-react-design-system/-/figma-react-design-system-3.0.23.tgz#0e9282bc4941e26f2dfb5cc9aac969cae930acd8"
-  integrity sha512-F+7vWf/YpAn3mXimKgZtkIgNrm4aIqJr9+BaLWFZuBsIdq1EAJJq6J/6V1Sj7JQ2rAyItk61EQFq5fyBS1ctQw==
+"@elasticontent/figma-react-design-system@^3.1.2":
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/@elasticontent/figma-react-design-system/-/figma-react-design-system-3.1.2.tgz#d773f1af128b926363ceae4521228ae826c43349"
+  integrity sha512-jYBToUMVcvrcgfwORqI07W3vG+Pw3fM577iCxh7s9Av+DYFxL2aRt5Al+YLEZrqeUJr5xQym3471VPLacKh46w==
   dependencies:
     dotenv "^8.2.0"
     node-fetch "^2.6.0"
