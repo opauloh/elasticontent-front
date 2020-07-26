@@ -4,9 +4,10 @@ import colors from '../../../../tokens/colors';
 import fontWeights from '../../../../tokens/fontWeights';
 import fontSizes from '../../../../tokens/fontSizes';
 import lineHeights from '../../../../tokens/lineHeights';
+import spacingStack from '../../../../tokens/spacingStack';
 
 const Dropdown = styled.div`
-  margin-top: ${spacingInline['$spacing-inline-xs']};
+  margin-top: ${spacingStack['$spacing-stack-xxs']};
 `;
 
 const Item = styled.div`

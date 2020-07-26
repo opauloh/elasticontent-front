@@ -46,7 +46,7 @@ const dropdownList = [
     expand: ExpandStatus.Default,
     icon: (
       <AvatarImg
-        size="md"
+        size="xxxs"
         src="https://www.pathstone.com/app/uploads/2020/02/avatar-placeholder.png"
       />
     ),
