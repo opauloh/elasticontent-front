@@ -14,7 +14,7 @@ export const GlobalStyle = createGlobalStyle`
   --theme-color-green: ${colors['$color-green-10']};
   --theme-color-red: ${colors['$color-red-40']};
   --theme-color-gray: ${colors['$color-gray-40']};
-  --theme-bg-color: ${colors['$color-gray-10']};
+  --theme-bg-color: ${colors['$color-white']};
   --theme-bg-color-secondary: ${colors['$color-gray-10']};
   --theme-bg-color-tertiary: ${colors['$color-gray-30']};
   --theme-bg-color-red: ${colors['$color-red-40']};

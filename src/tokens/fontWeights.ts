@@ -2,7 +2,8 @@
 
 enum fontWeights {
   '$font-weight-regular' = '400',
-  '$font-weight-medium' = '600',
+  '$font-weight-medium' = '500',
+  '$font-weight-semibold' = '600',
   '$font-weight-bold' = '400',
 }
 
