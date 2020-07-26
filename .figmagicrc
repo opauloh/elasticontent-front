@@ -1,6 +1,7 @@
 {
     "outputFolderTokens": "src/tokens",
-    "outputTokenFormat": "js",
+    "outputTokenFormat": "ts",
     "outputFolderGraphics" : "src/assets/icons",
-    "skipCamelize" : true
+    "skipCamelize" : true,
+    "outputTokenDataType": "enum"
 }

@@ -1,6 +1,6 @@
 import React, { FunctionComponent, useState } from 'react';
 // import { SizeType } from '../../../../types/SizeType';
-// import radii from '../../../../tokens/radii';
+// import borderRadius from '../../../../tokens/borderRadius';
 // import { getSize } from '../../../../helpers/sizeHelper';
 import { Styled } from "./styled";
 import { IconArrowRight, IconArrowUp } from '../../../icons';

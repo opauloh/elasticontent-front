@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 import colors from '../../../tokens/colors';
-import spacing from '../../../tokens/spacing';
+import spacingInline from '../../../tokens/spacingInline';
 
 const Container = styled.div`
-  background: ${colors["$white"]};
-  padding: ${spacing["$spacing-lg"]};
+  background: ${colors['$color-white']};
+  padding: ${spacingInline['$spacing-inline-xs']};
 `;
 
 export const Styled = {
-  Container,
-}
+  Container
+};

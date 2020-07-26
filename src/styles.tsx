@@ -5,36 +5,36 @@ import fontFamilies from './tokens/fontFamilies';
 
 export const GlobalStyle = createGlobalStyle`
 :root {
-  --theme-text: ${colors["$gray-60"]};
-  --theme-text-secondary: ${colors["$gray-80"]};
-  --theme-text-tertiary: ${colors["$gray-40"]};
-  --theme-color-purple: ${colors["$purple-10"]};
-  --theme-color-yellow: ${colors["$yellow-10"]};
-  --theme-color-blue: ${colors["$blue-10"]};
-  --theme-color-green: ${colors["$green-10"]};
-  --theme-color-red: ${colors["$red-40"]};
-  --theme-color-gray: ${colors["$gray-40"]};
-  --theme-bg-color: ${colors["$gray-10"]};
-  --theme-bg-color-secondary: ${colors["$gray-20"]};
-  --theme-bg-color-tertiary: ${colors["$gray-30"]};
-  --theme-bg-color-red: ${colors["$red-40"]};
-  --theme-bg-color-tooltip: ${colors["$gray-80"]};
+  --theme-text: ${colors['$color-gray-40']};
+  --theme-text-secondary: ${colors['$color-gray-40']};
+  --theme-text-tertiary: ${colors['$color-gray-40']};
+  --theme-color-purple: ${colors['$color-brand-10']};
+  --theme-color-yellow: ${colors['$color-yellow-10']};
+  --theme-color-blue: ${colors['$color-blue-10']};
+  --theme-color-green: ${colors['$color-green-10']};
+  --theme-color-red: ${colors['$color-red-40']};
+  --theme-color-gray: ${colors['$color-gray-40']};
+  --theme-bg-color: ${colors['$color-gray-10']};
+  --theme-bg-color-secondary: ${colors['$color-gray-10']};
+  --theme-bg-color-tertiary: ${colors['$color-gray-30']};
+  --theme-bg-color-red: ${colors['$color-red-40']};
+  --theme-bg-color-tooltip: ${colors['$color-gray-40']};
 }
 [data-theme="dark"] {
-  --theme-text: ${colors["$gray-10"]};
-  --theme-text-secondary: ${colors["$gray-10"]};
-  --theme-text-tertiary: ${colors["$gray-10"]};
-  --theme-color-purple: ${colors["$purple-20"]};
-  --theme-color-yellow: ${colors["$yellow-20"]};
-  --theme-color-blue: ${colors["$blue-20"]};
-  --theme-color-green: ${colors["$green-20"]};
-  --theme-color-red: ${colors["$red-30"]};
-  --theme-color-gray: ${colors["$gray-70"]};
-  --theme-bg-color: ${colors["$gray-80"]};
-  --theme-bg-color-secondary: ${colors["$black"]};
-  --theme-bg-color-tertiary: ${colors["$gray-80"]};
-  --theme-bg-color-red: ${colors["$red-60"]};
-  --theme-bg-color-tooltip: ${colors["$gray-80"]};
+  --theme-text: ${colors['$color-gray-10']};
+  --theme-text-secondary: ${colors['$color-gray-10']};
+  --theme-text-tertiary: ${colors['$color-gray-10']};
+  --theme-color-purple: ${colors['$color-brand-20']};
+  --theme-color-yellow: ${colors['$color-yellow-20']};
+  --theme-color-blue: ${colors['$color-blue-20']};
+  --theme-color-green: ${colors['$color-green-20']};
+  --theme-color-red: ${colors['$color-red-30']};
+  --theme-color-gray: ${colors['$color-gray-70']};
+  --theme-bg-color: ${colors['$color-gray-40']};
+  --theme-bg-color-secondary: ${colors['$color-black']};
+  --theme-bg-color-tertiary: ${colors['$color-gray-40']};
+  --theme-bg-color-red: ${colors['$color-red-60']};
+  --theme-bg-color-tooltip: ${colors['$color-gray-40']};
 }
 
 
@@ -88,9 +88,9 @@ table {
 }
 
 body {
-  font-size: ${fontSizes["$font-size-xxs"]};
+  font-size: ${fontSizes['$font-size-xxs']};
   margin: 0;
-  font-family: ${fontFamilies["$font-family"]};
+  font-family: ${fontFamilies['$font-family']};
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--theme-bg-color);

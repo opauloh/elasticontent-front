@@ -3,14 +3,14 @@ import styled from 'styled-components';
 import fontWeights from '../../../../tokens/fontWeights';
 import fontSizes from '../../../../tokens/fontSizes';
 import { AvatarImg } from '../AvatarImg';
-import spacing from '../../../../tokens/spacing';
+import spacingInline from '../../../../tokens/spacingInline';
 import { SizeType } from '../../../types/SizeType';
 
 const Name = styled.span`
     font-weight: ${fontWeights["$font-weight-medium"]};
     font-size: ${fontSizes["$font-size-xxs"]};
     color: var(--theme-text-secondary);
-    margin-left: ${spacing["$spacing-sm"]};
+    margin-left: ${spacingInline["$spacing-inline-xxxs"]};
 `;
 const Wrapper = styled.div`
     display: flex;

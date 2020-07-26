@@ -1,21 +1,27 @@
-import spacing from '../tokens/spacing';
+import spacingInline from '../tokens/spacingInline';
 import { SizeType } from '../components/types/SizeType';
 
 export const getSize = (size: SizeType) => {
     switch (size) {
+        case 'quarck':
+            return spacingInline['$spacing-inline-quarck'];
+        case 'nano':
+            return spacingInline['$spacing-inline-nano'];
+        case 'xxxs':
+            return spacingInline['$spacing-inline-xxxs'];
         case 'xxs':
-            return spacing[`$spacing-xxs`];
+            return spacingInline['$spacing-inline-xxs'];
         case 'xs':
-            return spacing[`$spacing-xs`];
+            return spacingInline['$spacing-inline-xs'];
         case 'sm':
-            return spacing[`$spacing-sm`];
+            return spacingInline['$spacing-inline-sm'];
         case 'md':
-            return spacing[`$spacing-md`];
-        case 'lg':
-            return spacing[`$spacing-lg`];
+            return spacingInline['$spacing-inline-md'];
         case 'xl':
-            return spacing[`$spacing-xl`];
+            return spacingInline['$spacing-inline-xl'];
+        case 'xxl':
+            return spacingInline['$spacing-inline-xxl'];
         default:
-            return spacing[`$spacing-md`];
+            return spacingInline['$spacing-inline-md'];
     }
 };
