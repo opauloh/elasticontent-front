@@ -12,6 +12,10 @@ const Cardlist = styled.div`
   display: flex;
   -webkit-box-align: stretch;
   flex-direction: column;
+  overflow-y: hidden;
+  &:hover {
+    overflow-y: auto;
+  }
 `;
 
 export const Styled = {

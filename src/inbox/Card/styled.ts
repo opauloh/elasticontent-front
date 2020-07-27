@@ -17,17 +17,18 @@ const Card = styled.div<{ active: boolean; new: boolean; status: string }>`
         "top-left top-line top-line top-right "
         "middle-left middle-line middle-line top-favorite"
         "bottom-left bottom-line bottom-line bottom-line";
-    grid-row-gap: ${spacingInline['$spacing-inline-nano']};
+    grid-row-gap: 0.3rem;
     grid-column-gap: ${spacingInline['$spacing-inline-xxxs']};
     border-bottom: 1px solid ${colors['$color-gray-10']};
-    ${(props) =>
-      props.active ? `background: ${colors['$color-brand-50']}` : ''};
-    cursor: pointer;
     ${(props) =>
       props.new
         ? `background: ${colors['$color-brand-10'].replace(', 1)', ', 0.3)')}`
         : ''};
+    ${(props) =>
+      props.active ? `background: ${colors['$color-brand-50']}` : ''};
     cursor: pointer;
+    cursor: pointer;
+    transition: all 0.2s ease;
 }
 `;
 
@@ -77,11 +78,16 @@ const Status = styled.div`
   grid-area: middle-left / middle-left / middle-left / middle-left;
 `;
 
-const Favorite = styled.div`
+const Favorite = styled.div<{ starred: boolean }>`
   grid-area: top-favorite / top-favorite / top-favorite / top-favorite;
-  color: ${colors['$color-yellow-30']};
+  color: ${(props) =>
+    props.starred ? colors['$color-yellow-30'] : colors['$color-gray-20']};
   text-align: center;
-  opacity: 0.95;
+  opacity: ${(props) => (props.starred ? 0.95 : 0)};
+  transition: all 0.4s ease;
+  ${Card}:hover & {
+    opacity: 0.95;
+  }
 `;
 
 const Description = styled.div<{ active: boolean }>`
@@ -94,6 +100,7 @@ const Description = styled.div<{ active: boolean }>`
     props.active ? colors['$color-white'] : colors['$color-gray-50']};
   opacity: ${(props) => (props.active ? 0.9 : 0.75)};
   mix-blend-mode: normal;
+  line-height: ${lineHeights['$line-height-sm']};
 `;
 
 export const Styled = {
