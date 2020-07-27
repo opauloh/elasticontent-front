@@ -24,7 +24,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "update-ds": "node --experimental-modules ./node_modules/@elasticontent/figma-react-design-system/index.mjs",
-    "update-icons": "node --experimental-modules ./node_modules/@elasticontent/figma-react-design-system/index.mjs --syncGraphics && npx @svgr/cli --typescript --icon --replace-attr-values \"#000=currentColor\" -d src/components/icons src/assets/icons"
+    "update-icons": "node --experimental-modules ./node_modules/@elasticontent/figma-react-design-system/index.mjs --syncGraphics && npx @svgr/cli --typescript --icon --replace-attr-values \"#000=currentColor\" -d src/icons src/assets/icons"
   },
   "eslintConfig": {
     "extends": "react-app"

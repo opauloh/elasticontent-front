@@ -4,8 +4,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { GlobalStyle } from './styles';
-import Inbox from './components/inbox/Inbox';
-
+import Inbox from './inbox/Inbox';
 
 ReactDOM.render(
   <React.StrictMode>
