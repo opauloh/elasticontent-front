@@ -5,16 +5,24 @@ import * as serviceWorker from './serviceWorker';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { GlobalStyle } from './styles';
 import Inbox from './inbox/Inbox';
+import reducer from './app/reducer';
+import middleware from './middleware';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+
+const store = createStore(reducer, middleware);
 
 ReactDOM.render(
   <React.StrictMode>
-    <GlobalStyle />
-    <BrowserRouter>
-      <Switch>
-        <Route path="/" exact={true} component={Inbox} />
-        <Route path="/style-guide" exact={true} component={App} />
-      </Switch>
-    </BrowserRouter>
+    <Provider store={store}>
+      <GlobalStyle />
+      <BrowserRouter>
+        <Switch>
+          <Route path="/" exact={true} component={Inbox} />
+          <Route path="/style-guide" exact={true} component={App} />
+        </Switch>
+      </BrowserRouter>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
