@@ -30,14 +30,16 @@ const Card: React.FC<CardProps> = ({ card, toggleStarred, setActive }) => {
       <Styled.Company active={card.active}>{card.company}</Styled.Company>
       <Styled.DateTime active={card.active}>19h40</Styled.DateTime>
       <Styled.Title active={card.active}>Mês de julho/Folclore</Styled.Title>
-      <Styled.Favorite
-        starred={card.starred}
-        onClick={(e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-          e.stopPropagation();
-          toggleStarred(e, card);
-        }}>
-        <IconStar />
-      </Styled.Favorite>
+      {card.starred && (
+        <Styled.Favorite
+          starred={card.starred}
+          onClick={(e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+            e.stopPropagation();
+            toggleStarred(e, card);
+          }}>
+          <IconStar />
+        </Styled.Favorite>
+      )}
       <Styled.Description active={card.active}>
         {card.description}
       </Styled.Description>
