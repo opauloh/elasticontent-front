@@ -1,6 +1,7 @@
 import React from 'react';
 import { Styled } from './styled';
 import Card from '../Card';
+import { InboxType } from '../../types/InboxType';
 import { CardType } from '../../types/CardType';
 import { useDispatch, useSelector } from 'react-redux';
 import {
@@ -10,7 +11,7 @@ import {
 
 const Cardlist: React.FC = () => {
   const dispatch = useDispatch();
-  const inbox = useSelector<{ inbox: CardType[] }, CardType[]>(
+  const inbox = useSelector<{ inbox: InboxType[] }, InboxType[]>(
     (state) => state.inbox
   );
 

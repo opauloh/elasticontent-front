@@ -29,7 +29,7 @@ export const Dropdown: FunctionComponent<DropdownProps> = ({
     // setActive
     // callback(content.id);
   };
-  console.log(content.icon);
+
   return (
     <Styled.Dropdown className={active ? 'active' : ''}>
       {/* <DropdownItem><IconSheet /> Minha Pauta</DropdownItem> */}

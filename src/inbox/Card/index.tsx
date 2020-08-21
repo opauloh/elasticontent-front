@@ -27,7 +27,7 @@ const Card: React.FC<CardProps> = ({ card, toggleStarred, setActive }) => {
           <Status />
         </Styled.Status>
       )}
-      <Styled.Company active={card.active}>{card.company}</Styled.Company>
+      <Styled.Company active={card.active}>{card.company.name}</Styled.Company>
       <Styled.DateTime active={card.active}>19h40</Styled.DateTime>
       <Styled.Title active={card.active}>Mês de julho/Folclore</Styled.Title>
       {card.starred && (

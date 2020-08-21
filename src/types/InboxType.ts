@@ -1,7 +1,7 @@
 import { UserType } from './UserType';
 import { CompanyType } from './CompanyType';
 
-export type CardType = {
+export type InboxType = {
   id: string;
   company: CompanyType;
   responsible: UserType;
