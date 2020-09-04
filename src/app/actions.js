@@ -1,4 +1,5 @@
-import API from '../helpers/fakeApi';
+// import API from '../helpers/fakeApi';
+import axios from 'axios';
 export const RECEIVE_DATA = 'RECEIVE_DATA';
 
 function receiveData(
@@ -14,21 +15,24 @@ function receiveData(
 
 export function handleInitialData() {
   return (dispatch) => {
-    Promise.all([
-      API.fetchInbox()
-      // , API.fetchGoals()
-    ]).then(
-      ([
-        inbox
-        // , goals
-      ]) => {
-        dispatch(
-          receiveData(
-            inbox
-            // , goals
-          )
-        );
-      }
-    );
+    axios.get('/inbox').then((response) => {
+      dispatch(receiveData(response.data));
+    });
+    // Promise.all([
+    //   API.fetchInbox()
+    //   // , API.fetchGoals()
+    // ]).then(
+    //   ([
+    //     inbox
+    //     // , goals
+    //   ]) => {
+    //     dispatch(
+    //       receiveData(
+    //         inbox
+    //         // , goals
+    //       )
+    //     );
+    //   }
+    // );
   };
 }
