@@ -13,6 +13,16 @@ const Dropdown = styled.div`
 `;
 const Menu = styled.div`
   margin: 0 ${spacingStack['$spacing-stack-xxs']};
+  height: 80vh;
+  overflow-y: hidden;
+  &:hover {
+    overflow-y: auto;
+  }
+`;
+const Title = styled.div`
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 `;
 
 const Item = styled.div`
@@ -38,8 +48,14 @@ const Item = styled.div`
     margin-right: ${spacingInline['$spacing-inline-nano']};
     height: 1.4em;
     width: 1.4em;
+    flex-shrink: 0;
     color: ${colors['$color-gray-30']};
+    transition: all 0.2s ease;
+    &.active {
+      transform: rotate(90deg);
+    }
   }
+
   > img {
     margin-right: ${spacingInline['$spacing-inline-nano']};
   }
@@ -68,7 +84,7 @@ const ListItem = styled.li`
         height: 1.2em;
         width: 1.2em;
         margin-right: ${spacingInline['$spacing-inline-nano']};
-        margin-left: ${spacingInline['$spacing-inline-xxxs']};
+        margin-left: 0.85rem;
     }
 `;
 
@@ -80,6 +96,7 @@ export const Styled = {
   Menu,
   Dropdown,
   Item,
+  Title,
   List,
   ListItem,
   BadgeWrapper

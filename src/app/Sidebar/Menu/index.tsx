@@ -20,6 +20,7 @@ import { InboxType } from '../../../types/InboxType';
 import { cursorTo } from 'readline';
 import { CompanyType } from '../../../types/CompanyType';
 import IDictionary from '../../../interfaces/IDicionary';
+// import { handleSetActiveInboxMenu } from '../../../inbox/inboxActions';
 
 enum MenuStatus {
   Default,
@@ -151,6 +152,13 @@ const User: React.FC<{ count: number }> = ({ count }) => (
 );
 
 const Company: React.FC<{ companies: CompanyMenuType[] }> = ({ companies }) => {
+  const [active, setActive] = useState<IDictionary<{}>>({});
+  // const menu = useSelector<{ menu: IDictionary<{}> }, IDictionary<{}>>(
+  //   (state) => state.menu
+  // );
+
+  // const dispatch = useDispatch();
+
   const submenuList = [
     {
       name: 'Produção',
@@ -165,40 +173,69 @@ const Company: React.FC<{ companies: CompanyMenuType[] }> = ({ companies }) => {
       slug: 'APPROVING'
     }
   ];
+
+  // const handleClick = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+  //   setActive((active) => !active);
+  //   event.stopPropagation();
+  // setActive
+  // callback(content.id);
+  // };
+
   return (
     <>
       {companies.map((company) => (
         <Styled.Dropdown key={company.id}>
           {/* <DropdownItem><IconSheet /> Minha Pauta</DropdownItem> */}
           <Styled.Item
-          // onClick={() => setActiveItem(content.id)}
-          // onClick={() => {
-          //   setActive(true);
-          //   callback(content.id);
-          // }}
-          // className={activeItem === content.id ? 'active' : ''}
-          >
+            // onClick={() => setActiveItem(content.id)}
+            onClick={(e) => {
+              // e.stopPropagation();
+              setActive((active) => ({
+                ...active,
+                [company.id]: !active[company.id]
+              }));
+              // const setActive = (event: React.MouseEvent<HTMLDivElement>) =>
+              // dispatch(handleSetActiveInboxMenu(company.id));
+
+              //   callback(content.id);
+            }}
+            className={active[company.id] && 'active'}>
             {/* <Icon active={active} onClick={handleClick} /> */}
-            <Icon active={false} onClick={() => ({})} />
+            <Icon
+              className={active[company.id] && 'active'}
+              active={false}
+              // onClick={(
+              //   event: React.MouseEvent<HTMLDivElement, MouseEvent>
+              // ) => {
+              //   event.stopPropagation();
+              //   setActive((active) => ({
+              //     ...active,
+              //     [company.id]: !active[company.id]
+              //   }));
+              // }}
+            />
             {/* {content.icon} */}
             {/* {content.name} */}
-            {company.name}
+            <AvatarImg size="xxxs" src={company.logo} />
+            <Styled.Title title={company.name}>{company.name}</Styled.Title>
             <Styled.BadgeWrapper>{company.count}</Styled.BadgeWrapper>
           </Styled.Item>
-          {/* {active && ( */}
-          <Styled.List>
-            {submenuList.map((submenu: any) => (
-              <Styled.ListItem
-              // color={activeItem === list.id ? list.color : false}
-              // className={activeItem === list.id ? 'active' : ''}
-              // onClick={() => callback(list.id)}
-              >
-                {/* {list.icon} */}
-                {submenu.name}
-                {/* <Styled.BadgeWrapper>{company}</Styled.BadgeWrapper> */}
-              </Styled.ListItem>
-            ))}
-          </Styled.List>
+          {active[company.id] && (
+            <Styled.List>
+              {submenuList.map((submenu: any) => (
+                <Styled.ListItem
+                // color={activeItem === list.id ? list.color : false}
+                // className={activeItem === list.id ? 'active' : ''}
+                // onClick={() => callback(list.id)}
+                >
+                  {/* {list.icon} */}
+                  <IconSheet />
+                  {submenu.name}
+                  {/* <Styled.BadgeWrapper>{company}</Styled.BadgeWrapper> */}
+                </Styled.ListItem>
+              ))}
+            </Styled.List>
+          )}
           {/* <DropdownListItem><IconStarOutline /> Starred</DropdownListItem> */}
         </Styled.Dropdown>
       ))}

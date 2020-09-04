@@ -3,6 +3,7 @@ import { Styled } from './styled';
 import { CardType } from '../../types/CardType';
 import { IconStar } from '../../icons';
 import Status from '../../app/Status';
+import momentHelper from '../../helpers/momentHelper';
 
 type CardProps = {
   card: CardType;
@@ -28,8 +29,10 @@ const Card: React.FC<CardProps> = ({ card, toggleStarred, setActive }) => {
         </Styled.Status>
       )}
       <Styled.Company active={card.active}>{card.company.name}</Styled.Company>
-      <Styled.DateTime active={card.active}>19h40</Styled.DateTime>
-      <Styled.Title active={card.active}>Mês de julho/Folclore</Styled.Title>
+      <Styled.DateTime active={card.active}>
+        {momentHelper(card.datetime).time}
+      </Styled.DateTime>
+      <Styled.Title active={card.active}>{card.title}</Styled.Title>
       {card.starred && (
         <Styled.Favorite
           starred={card.starred}
