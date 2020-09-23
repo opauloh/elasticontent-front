@@ -3,7 +3,7 @@ import React from 'react';
 const useTheme = () => {
   const theme = React.useRef('light');
 
-  React.useEffect(() => {
+  React.useLayoutEffect(() => {
     setTheme();
   }, []);
 
