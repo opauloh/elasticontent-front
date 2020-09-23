@@ -1,21 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Badge from './app/Badge';
 import Pallete from './app/Pallete';
 import IconTitle from './app/Title/Icon';
 import { AvatarImg } from './app/Avatar/AvatarImg';
 import SvgIconFilter from './icons/IconFilter';
 import AvatarName from './app/Avatar/AvatarName';
+import useTheme from './hooks/useTheme';
 
 const App: React.FC = () => {
-  const [theme, setTheme] = useState('light');
+  const toggleTheme = useTheme();
 
-  useEffect(() => {
-    document.documentElement.setAttribute('data-theme', theme);
-  }, [theme]);
-
-  const toggleTheme = () =>
-    setTheme((theme) => (theme === 'light' ? 'dark' : 'light'));
-
+  console.log(`I'm rendered`);
   return (
     <div style={{ padding: '1rem' }}>
       <h1>
