@@ -3,7 +3,7 @@
 enum lineHeights {
   '$line-height-lg' = '1.65',
   '$line-height-md' = '1.65',
-  '$line-height-sm' = '1.65',
+  '$line-height-sm' = '1.50',
 }
 
 export default lineHeights;
