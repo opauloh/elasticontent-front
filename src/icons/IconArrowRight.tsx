@@ -6,7 +6,7 @@ function SvgIconArrowRight(props: React.SVGProps<SVGSVGElement>) {
       <path
         d="M2 12l5-5-5-5"
         stroke="currentColor"
-        strokeWidth={1.667}
+        strokeWidth={1.5}
         strokeLinecap="round"
         strokeLinejoin="round"
       />
