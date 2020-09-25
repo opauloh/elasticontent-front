@@ -1,21 +1,20 @@
 import React from 'react';
+import useLocalStorage from './useLocalStorage';
 
 const useTheme = () => {
-  const theme = React.useRef('light');
+  //@ts-ignore
+  const [theme, updateTheme] = useLocalStorage('theme', 'dark');
 
   React.useLayoutEffect(() => {
-    setTheme();
-  }, []);
+    //@ts-ignore
+    document.documentElement.setAttribute('data-theme', theme);
+  }, [theme]);
 
   const toggleTheme = () => {
-    theme.current = theme.current === 'light' ? 'dark' : 'light';
-    setTheme();
-  };
-  const setTheme = () => {
-    document.documentElement.setAttribute('data-theme', theme.current);
+    updateTheme(theme === 'light' ? 'dark' : 'light');
   };
 
-  return toggleTheme;
+  return [theme, toggleTheme];
 };
 
 export default useTheme;
